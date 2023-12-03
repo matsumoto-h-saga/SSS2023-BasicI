@@ -6,20 +6,71 @@
   position: relative;
   padding:0;
   background: #7494c0;
+  background-image: url('../images/IMG_5532.jpg');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   max-width: 400px;
   margin: 20px auto;
   font-size: 80%;
 }
 
+
 /* タイトル部分 */
 .line__container .line__title {
-  background: #273246;
+  background: #ffff66;
   padding: 10px;
+  font-family: sans-serif;
   text-align: center;
   font-size: 150%;
-  color: #ffffff;
+  color: #800080;
 }
+
+/* 008 */
+.button008  a{
+    background: #ffccff;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align:center;
+    margin: auto;
+    justify-content: space-between;
+    max-width: 20px;
+    padding: 10px 20px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-family: sans-serif;
+    font-weight: 600;
+    z-index:0;
+    white-space:nowrap;
+}
+
+.block{
+    display:block;
+    wideth:100px;
+    margin:0 auto;
+}
+
+.button008 a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bb6ff;
+    transition: .3s;
+    left:0;
+}
+.button008 a:hover {
+    color: #f00;
+}
+.button008 a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
 
 /* 会話部分 */
 .line__container .line__contents {
@@ -35,7 +86,7 @@
 
 /* スタンプ画像最大幅 */
 .line__container .stamp img {
-  max-width:150px;
+  max-width:200px;
 }
 
 /* 相手の会話 */
@@ -44,15 +95,15 @@
     position: relative;
     display: block;
     margin-bottom: 35px;
-    max-width: 80%;
+    max-width: 70%;
     clear: both;
 }
 
 /* アイコン画像 */
 .line__container .line__left figure {
-    width: 50px;
+    width: 200px;
     position: absolute;
-    top: 15px;
+    top: 30px;
     left: 0;
     padding: 0;
     margin: 0;
@@ -61,9 +112,9 @@
 
 /* 正方形を用意 */
 .line__container .line__left figure img{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: 60%;
+    width: 80px;
+    height: 80px;
 }
 
 .line__container .line__left .line__left-text {
@@ -71,17 +122,18 @@
 }
 
 .line__container .line__left .line__left-text .name {
-  font-size: 80%;
+  font-size: 120%;
+  font-family: sans-serif;
   color: #ffffff;
 }
 
 /* コメントエリア */
 .line__container .line__left .text {
-  margin: 0;
+  margin: 10;
   position: relative;
   padding: 10px;
-  border-radius: 20px;
-  background-color: #ffffff;
+  border-radius: 30px;
+  background-color: #ffff99;
 }
 
 /* 吹き出し */
@@ -93,7 +145,7 @@
   height: 0;
   left: -10px;
   top: 10px;
-  border-right: 20px solid #ffffff;
+  border-right: 20px solid #ffff99;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
@@ -147,23 +199,23 @@
   text-align: right;
   left: -30px;
   bottom: 0px;
-  font-size: 80%;
+  font-size: 100%;
   color: #ffffff;
 }
 
 .line__form-container {
   position: absolute;
   bottom: 0;
-  background-color: white;
+  background-color: #000000;
   width: 100%;
   left: 0;
-  padding: 2px;
+  padding: 3px;
 }
 
 .line__input {
-  width: 90%;
+  width: 85%;
   border: none;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   border-radius: 10px;
   line-height: 2;
 }

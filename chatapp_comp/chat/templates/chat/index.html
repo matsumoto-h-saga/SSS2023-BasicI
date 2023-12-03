@@ -6,6 +6,34 @@
     <title>chat</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script>
+        function Greeting() {
+        var nt = new Date();
+        var hr = nt.getHours();
+
+        if( hr <= 1 ) { document.write('夜はこれから！'); }
+        else if( hr <= 3 ) { document.write('そろそろ寝た方がいいんじゃ…？'); }
+        else if( hr <= 5 ) { document.write('早いですね。もしくは徹夜？'); }
+        else if( hr <= 7 ) { document.write('おはようございます。'); }
+        else if( hr <= 9 ) { document.write('そろそろお仕事ですか？'); }
+        else if( hr <= 11 ) { document.write('こんにちは。'); }
+        else if( hr <= 13 ) { document.write('お昼時です。お腹空きませんか？'); }
+        else if( hr <= 15 ) { document.write('おやつの時間です。'); }
+        else if( hr <= 17 ) { document.write('そろそろ夕方ですね。'); }
+        else if( hr <= 19 ) { document.write('そろそろ夕食ですか？'); }
+        else if( hr <= 21 ) { document.write('こんばんは。'); }
+        else if( hr <= 23 ) { document.write('ネットが混み出す頃ですね。'); }
+        }
+    </script>
+</head>
+
+
+
 <body>
 
 <div class="line__container">
@@ -18,16 +46,30 @@
             <div class="text">{{ message.contents }}</div>
             <span class="date">既読<br>0:30</span>
         </div>
+
+        <div class="button-container">
+            <div class="button008">
+                <table>
+                    <tr>
+                        <td align="center"> <a href="">運動</a></td>
+                        <td align="center"><a href="">健康</a></td>
+                        <td align="center"><a href="">料理</a></td>
+                        <td align="center"><a href="">外食</a></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
         <div class="line__left">
             <figure>
                 <img src="{% static 'images/IMG_5470.JPG' %}"/>
             </figure>
             <div class="line__left-text">
                 <div class="name">トレーナー</div>
-                <div class="text">{{message.response}}</div>
+                 <div class="text"><script>Greeting()</script></div>
             </div>
         </div>
-        {% endfor %}
+            {% endfor %}
 
         <div class="line__form-container">
             <form class="line__form" action="{% url 'chat:post' %}" method="post">
