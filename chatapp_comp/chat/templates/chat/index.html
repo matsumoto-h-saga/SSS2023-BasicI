@@ -74,8 +74,8 @@
         <div class="line__form-container">
             <form class="line__form" action="{% url 'chat:post' %}" method="post">
                 {% csrf_token %}
-                <input class="line__input" size="20" type="text" name="contents" required>
-                <input class="line__submit" type="submit" value="→">
+                <input class="line__input" size="20"  type="text" name="contents" required>
+                <input class="line__submit" type="submit" value="送信">
             </form>
         </div>
 

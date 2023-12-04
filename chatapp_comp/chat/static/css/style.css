@@ -61,7 +61,7 @@
     display: block;
     background: #6bb6ff;
     transition: .3s;
-    left:100;
+    left: 0;
 }
 .button008 a:hover {
     color: #f00;
