@@ -4,12 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>chat</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-<head>
-    <meta charset="UTF-8">
-    <title>chat</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <script>
         function Greeting() {
@@ -74,8 +69,8 @@
         <div class="line__form-container">
             <form class="line__form" action="{% url 'chat:post' %}" method="post">
                 {% csrf_token %}
-                <input class="line__input" size="20"  type="text" name="contents" required>
-                <input class="line__submit" type="submit" value="送信">
+                <input class="line__input" size="20" type="text" name="contents" required>
+                <input class="line__submit" type="submit" value="→">
             </form>
         </div>
 
