@@ -42,6 +42,17 @@
             <span class="date">既読<br>0:30</span>
         </div>
 
+
+        <div class="line__left">
+            <figure>
+                <img src="{% static 'images/IMG_5470.JPG' %}"/>
+            </figure>
+            <div class="line__left-text">
+                <div class="name">トレーナー</div>
+                 <div class="text">{{message.response}}</div>
+            </div>
+        </div>
+            {% endfor %}
         <div class="button-container">
             <div class="button008">
                 <table>
@@ -53,27 +64,14 @@
                     </tr>
                 </table>
             </div>
-
         </div>
-        <div class="line__left">
-            <figure>
-                <img src="{% static 'images/IMG_5470.JPG' %}"/>
-            </figure>
-            <div class="line__left-text">
-                <div class="name">トレーナー</div>
-                 <div class="text"><script>Greeting()</script></div>
-            </div>
-        </div>
-            {% endfor %}
-
-        <div class="line__form-container">
-            <form class="line__form" action="{% url 'chat:post' %}" method="post">
-                {% csrf_token %}
-                <input class="line__input" size="20" type="text" name="contents" required>
-                <input class="line__submit" type="submit" value="→">
-            </form>
-        </div>
-
+    </div>
+    <div class="line__form-container">
+        <form class="line__form" action="{% url 'chat:post' %}" method="post">
+            {% csrf_token %}
+            <input class="line__input" size="20" type="text" name="contents" required>
+            <input class="line__submit" type="submit" value="→">
+        </form>
     </div>
 </div>
 
